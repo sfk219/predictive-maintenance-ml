@@ -1,20 +1,19 @@
-# Predictive Maintenance ML
+# Predictive Maintenance ML (Synthetic Data)
 
-An educational machine-learning workflow for equipment failure prediction using synthetic telemetry, preprocessing, evaluation and reproducible tests.
+A **runnable, educational** predictive-maintenance classifier built with Python, pandas and scikit-learn. Generates synthetic equipment readings and evaluates failure prediction with a stratified held-out test set.
 
-**Technologies:** Python, scikit-learn, pandas.
+## Run
+```bash
+pip install -r requirements.txt
+python -m maintenance_ml.train
+```
 
-## Portfolio context
-This repository is an independently authored educational demonstration aligned with technologies in my professional background and CV. It does not contain employer-owned code or real customer data.
+Outputs `artifacts/model.joblib` and `artifacts/metrics.json`. The model uses standardization and logistic regression; accuracy is only for synthetic constructed data.
 
-## What it demonstrates
-An educational machine-learning workflow for equipment failure prediction using synthetic telemetry, preprocessing, evaluation and reproducible tests.
+## Test
+```bash
+pip install pytest
+pytest -q
+```
 
-## Limitations
-Dataset is synthetic; this project does not establish real-world industrial accuracy.
-
-## Source code
-The full working demonstration was prepared as part of my portfolio package; source files and tests will be added separately. This README alone does not constitute a working implementation.
-
-## About the author
-Samra Faisal Khan — MSc Software Engineering (NUST), based in Germany. [GitHub profile](https://github.com/sfk219) · [LinkedIn](https://www.linkedin.com/in/samra-faisal-khan-6a5232142/)
+**Tech:** Python, pandas, numpy, scikit-learn, machine learning, model evaluation. No company data or real equipment deployments; not industrially validated.
